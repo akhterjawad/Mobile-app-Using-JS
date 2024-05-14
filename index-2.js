@@ -1,0 +1,1 @@
+console.log('hellow index-2.js');
