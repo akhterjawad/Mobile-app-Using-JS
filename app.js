@@ -119,6 +119,8 @@ for (let i = 0; i < products.length; i++) {
   </div>
 </div>`
 }
+
+
 let array = []
 function addtocard(Click) {
     // console.log('add to card',products[Click].name);
@@ -130,6 +132,8 @@ function addtocard(Click) {
     }
     console.log(array);
 }
+
+
 function gotocart() {
     console.log('index-2.html');
     window.location = 'index-2.html'
