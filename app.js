@@ -115,22 +115,22 @@ for (let i = 0; i < products.length; i++) {
     <h5 class="card-title">${products[i].name}</h5>
     <h6 class="card-title">${products[i].price}</h6>
     <p class="card-text">${products[i].description}</p>
-    <button class="card-link bg-primary" onclick="addtocard(${i})">Add To Card</button>
+    <button class="card-link bg-primary rounded" onclick="addtocard(${i})">Add To Card</button>
   </div>
 </div>`
 }
-let array =[]
+let array = []
 function addtocard(Click) {
     // console.log('add to card',products[Click].name);
     if (array.includes(products[Click])) {
-      products[Click].quantity +=1;  
-    }else{
+        products[Click].quantity += 1;
+    } else {
         products[Click].quantity = 1
-array.push(products[Click]);
+        array.push(products[Click]);
     }
-console.log(array);
+    console.log(array);
 }
-function gotocart(){
+function gotocart() {
     console.log('index-2.html');
-    window.location='index-2.html'
+    window.location = 'index-2.html'
 }
