@@ -1,17 +1,17 @@
-let getdata = JSON.parse(localStorage.getItem('carditems'));
-console.log(getdata);
+let getitem = JSON.parse(localStorage.getItem('getdata'));
+console.log(getitem);
 let div = document.querySelector('.products');
 let h1 = document.querySelector('h1');
 function randerscreen() {
-    if (getdata != null && getdata.length > 0) {
-        for (let i = 0; i < getdata.length; i++) {
+    if (getitem != null && getitem.length > 0) {
+        for (let i = 0; i < getitem.length; i++) {
             div.innerHTML += `
     <div class="card" style="width: 18rem;">
           <div class="card-body">
-          <h5 class="card-title">${getdata[i].name}</h5>
-          <h6 class="card-title">${getdata[i].price}</h6>
-          <p class="card-text">${getdata[i].description}</p>
-          <button class="card-link bg-primary rounded" onclick="addtocard(${i})">Add To Card</button>
+          <h5 class="card-title">${getitem[i].name}</h5>
+          <h6 class="card-title">${getitem[i].price}</h6>
+          <p class="card-text">${getitem[i].description}</p>
+          <button class="card-link bg-danger rounded">Delete</button>
         </div>
     </div>`
         }

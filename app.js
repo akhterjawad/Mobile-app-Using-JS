@@ -120,8 +120,15 @@ for (let i = 0; i < products.length; i++) {
 </div>`
 }
 
-
-let array = []
+let array;
+let items = JSON.parse(localStorage.getItem('getdata'));
+if(items === null){
+    array = [];
+}else{
+    array = items;
+    console.log(array)
+}
+// let array = []
 function addtocard(Click) {
     // console.log('add to card',products[Click].name);
     if (array.includes(products[Click])) {
@@ -136,5 +143,6 @@ function addtocard(Click) {
 
 function gotocart() {
     console.log('index-2.html');
+    localStorage.setItem('getdata',JSON.stringify(array))
     window.location = 'index-2.html'
 }
