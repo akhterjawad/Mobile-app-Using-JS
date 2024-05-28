@@ -73,18 +73,48 @@ const phones = [
     },
 ]
 
-let div = document.querySelector('#products')
+let div = document.querySelector('.products')
+let div2 = document.querySelector('.products2')
 
 for (let i = 0; i < phones.length; i++) {
     div.innerHTML += `
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src=${phones[i].img} alt="">
-  <div class="card-body">
-    <h5 class="card-title">${phones[i].model}</h5>
-    <h6 class="card-title">${phones[i].price}</h6>
-    <button class="card-link bg-primary rounded" onclick="addtocard(${i})">Add To Card</button>
-  </div>
-</div>`
+    <div class="rounded  card-width  p-2 ">
+                    <div class=" text-center  p-2"><img src="${phones[i].img}" class="card-img-width "
+                            alt="no image">
+                    </div>
+                    <p class="mt-1 mb-2"> ${phones[i].brand} ${phones[i].model}</p>
+                    <h4 class="mt-5"><sup>RS</sup> ${phones[i].price}</h4>
+                    <div class=" fw-lighter wrap1 d-flex align-items-center justify-content-between">
+                        <div class="">
+                            <p><strike class="strike1 mt-3">
+                                    <sup class="strike2">RS</sup>
+                                    <span class="strike2">8,000</span>
+                                </strike>
+                            </p>
+                        </div>
+                        <div><button type="button" onclick="addtocard(${i})" class="btn card-button-font-size btn-outline-success mb-2">Add To Card</button></div>
+                    </div>
+                </div>`
+}
+for (let i = 0; i < phones.length; i++) {
+    div2.innerHTML += `
+    <div class="rounded  card-width  p-2 ">
+                    <div class=" text-center  p-2"><img src="${phones[i].img}" class="card-img-width "
+                            alt="no image">
+                    </div>
+                    <p class="mt-1 mb-2"> ${phones[i].brand} ${phones[i].model}</p>
+                    <h4 class="mt-5"><sup>RS</sup> ${phones[i].price}</h4>
+                    <div class=" fw-lighter wrap1 d-flex align-items-center justify-content-between">
+                        <div class="">
+                            <p><strike class="strike1 mt-3">
+                                    <sup class="strike2">RS</sup>
+                                    <span class="strike2">8,000</span>
+                                </strike>
+                            </p>
+                        </div>
+                        <div><button type="button" onclick="addtocard(${i})" class="btn card-button-font-size btn-outline-success mb-2">Add To Card</button></div>
+                    </div>
+                </div>`
 }
 
 let array;
@@ -115,23 +145,26 @@ function gotocart() {
 }
 
 
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    responsive: {
-        0: {
-            items: 3
-        },
-        320: {
-            items: 3
-        },
-        600: {
-            items: 4
-        },
-        1000: {
-            items: 8
-        }
-    }
-})
+    // $('.owl-carousel').owlCarousel({
+    //     loop: true,
+    //     margin: 10,
+    //     nav: true,
+    //     responsive: {
+    //         0: {
+    //             items: 3
+    //         },
+    //         320: {
+    //             items: 3
+    //         },
+    //         600: {
+    //             items: 4
+    //         },
+    //         1000: {
+    //             items: 8
+    //         }
+    //     }
+    // })
+    
+
+
 

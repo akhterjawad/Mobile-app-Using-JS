@@ -208,8 +208,7 @@ body {
 }
 
 .card-img-width {
-    width: 120px;
-    height: 120px;
+    width: 50%;
 }
 
 div .card-width {
@@ -650,3 +649,4 @@ p a :hover {
 /* .hover-1 :hover {
     border-bottom: 3px solid #48afff;
 } */
+
