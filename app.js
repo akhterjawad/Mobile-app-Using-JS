@@ -50,7 +50,7 @@ const phones = [
         ram: 8,
         rom: 256,
         camera: '48 megapixel',
-        price: 	379.99,
+        price: 379.99,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f5-2.jpg'
     },
     {
@@ -119,9 +119,9 @@ for (let i = 0; i < phones.length; i++) {
 
 let array;
 let items = JSON.parse(localStorage.getItem('getdata'));
-if(items === null){
+if (items === null) {
     array = [];
-}else{
+} else {
     array = items;
     console.log(array)
 }
@@ -140,31 +140,31 @@ function addtocard(Click) {
 
 function gotocart() {
     console.log('index-2.html');
-    localStorage.setItem('getdata',JSON.stringify(array))
+    localStorage.setItem('getdata', JSON.stringify(array))
     window.location = 'index-2.html'
 }
 
 
-    // $('.owl-carousel').owlCarousel({
-    //     loop: true,
-    //     margin: 10,
-    //     nav: true,
-    //     responsive: {
-    //         0: {
-    //             items: 3
-    //         },
-    //         320: {
-    //             items: 3
-    //         },
-    //         600: {
-    //             items: 4
-    //         },
-    //         1000: {
-    //             items: 8
-    //         }
-    //     }
-    // })
-    
+// $('.owl-carousel').owlCarousel({
+//     loop: true,
+//     margin: 10,
+//     nav: true,
+//     responsive: {
+//         0: {
+//             items: 3
+//         },
+//         320: {
+//             items: 3
+//         },
+//         600: {
+//             items: 4
+//         },
+//         1000: {
+//             items: 8
+//         }
+//     }
+// })
+
 
 
 

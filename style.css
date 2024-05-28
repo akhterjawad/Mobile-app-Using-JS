@@ -650,3 +650,6 @@ p a :hover {
     border-bottom: 3px solid #48afff;
 } */
 
+.btn-info{
+    margin: 15px auto !important;
+}
