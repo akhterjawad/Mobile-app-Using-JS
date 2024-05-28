@@ -6,14 +6,15 @@ function randerscreen() {
     if (getitem != null && getitem.length > 0) {
         for (let i = 0; i < getitem.length; i++) {
             div.innerHTML += `
-    <div class="card" style="width: 18rem;">
-          <div class="card-body">
-          <h5 class="card-title">${getitem[i].name}</h5>
-          <h6 class="card-title">${getitem[i].price}</h6>
-          <p class="card-text">${getitem[i].description}</p>
-          <button class="card-link bg-danger rounded">Delete</button>
-        </div>
-    </div>`
+            <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src=${getitem[i].img} alt="">
+  <div class="card-body">
+    <h5 class="card-title">${getitem[i].model}</h5>
+    <h6 class="card-title">${getitem[i].price}</h6>
+    <button class="card-link bg-primary rounded" onclick="addtocard(${i})">Add To Card</button>
+  </div>
+</div>
+    `
         }
     } else {
         h1.innerHTML = 'No any items found';

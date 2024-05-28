@@ -1,120 +1,87 @@
-const products = [
+const phones = [
     {
-        name: "Laptop",
-        price: 999.99,
-        description: "Powerful laptop for all your computing needs."
+        brand: 'Samsung ',
+        model: 'Galaxy A55',
+        ram: 12,
+        rom: 256,
+        camera: '50 megapixel',
+        price: 370.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg'
     },
     {
-        name: "Headphones",
-        price: 79.99,
-        description: "High-quality headphones for immersive audio experience."
+        brand: 'Apple ',
+        model: 'iPhone XS Max',
+        ram: 4,
+        rom: 128,
+        camera: '12 megapixel',
+        price: 202.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg'
     },
     {
-        name: "Smartphone",
-        price: 699.99,
-        description: "Advanced smartphone with cutting-edge features."
+        brand: 'Apple ',
+        model: 'iPhone 11',
+        ram: 4,
+        rom: 128,
+        camera: '12 megapixel',
+        price: 252.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg'
     },
     {
-        name: "Tablet",
-        price: 449.99,
-        description: "Portable tablet for entertainment and productivity."
+        brand: 'Samsung ',
+        model: 'Galaxy S24 Ultra',
+        ram: 12,
+        rom: 512,
+        camera: '200 megapixel',
+        price: 999.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928-stylus.jpg'
     },
     {
-        name: "Smartwatch",
-        price: 249.99,
-        description: "Stay connected and track your fitness with this smartwatch."
+        brand: 'Sony ',
+        model: 'Xperia 1V',
+        ram: 12,
+        rom: 256,
+        camera: '48 megapixel',
+        price: 858.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg'
     },
     {
-        name: "Gaming Console",
-        price: 399.99,
-        description: "Experience the thrill of gaming with this powerful console."
+        brand: 'Xiaomi ',
+        model: 'Poco F5',
+        ram: 8,
+        rom: 256,
+        camera: '48 megapixel',
+        price: 	379.99,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f5-2.jpg'
     },
     {
-        name: "Camera",
-        price: 599.99,
-        description: "Capture life's moments with stunning clarity and detail."
+        brand: 'Google ',
+        model: 'Pixel 8 Pro',
+        ram: 12,
+        rom: 512,
+        camera: '50 megapixel',
+        price: 999.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg'
     },
     {
-        name: "Wireless Speaker",
-        price: 129.99,
-        description: "Enjoy your favorite music wirelessly with this speaker."
+        brand: 'Xiaomi ',
+        model: 'Redmi Note 13 Pro+',
+        ram: 16,
+        rom: 512,
+        camera: '108 megapixel',
+        price: 329.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro-plus-int.jpg'
     },
-    {
-        name: "External Hard Drive",
-        price: 129.99,
-        description: "Expand your storage and backup your files with ease."
-    },
-    {
-        name: "Wireless Mouse",
-        price: 29.99,
-        description: "Navigate your computer with precision and comfort."
-    },
-    {
-        name: "Printer",
-        price: 199.99,
-        description: "Print documents and photos with exceptional quality."
-    },
-    {
-        name: "Desk Lamp",
-        price: 49.99,
-        description: "Illuminate your workspace with adjustable brightness."
-    },
-    {
-        name: "Fitness Tracker",
-        price: 79.99,
-        description: "Monitor your health and track your workouts."
-    },
-    {
-        name: "Bluetooth Earbuds",
-        price: 99.99,
-        description: "Wireless earbuds for on-the-go audio enjoyment."
-    },
-    {
-        name: "Portable Charger",
-        price: 39.99,
-        description: "Charge your devices anywhere, anytime."
-    },
-    {
-        name: "USB Flash Drive",
-        price: 19.99,
-        description: "Store and transfer your files conveniently."
-    },
-    {
-        name: "Monitor",
-        price: 299.99,
-        description: "Upgrade your display for enhanced productivity."
-    },
-    {
-        name: "Keyboard",
-        price: 49.99,
-        description: "Type comfortably with this reliable keyboard."
-    },
-    {
-        name: "Computer Mousepad",
-        price: 9.99,
-        description: "Enhance your mouse precision with this smooth pad."
-    },
-    {
-        name: "Graphic Tablet",
-        price: 199.99,
-        description: "Express your creativity with this digital drawing tablet."
-    },
-    {
-        name: "Wireless Router",
-        price: 79.99,
-        description: "Fast and reliable internet connection for your home network."
-    }
-];
+]
 
 let div = document.querySelector('#products')
 
-for (let i = 0; i < products.length; i++) {
+for (let i = 0; i < phones.length; i++) {
     div.innerHTML += `
     <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src=${phones[i].img} alt="">
   <div class="card-body">
-    <h5 class="card-title">${products[i].name}</h5>
-    <h6 class="card-title">${products[i].price}</h6>
-    <p class="card-text">${products[i].description}</p>
+    <h5 class="card-title">${phones[i].model}</h5>
+    <h6 class="card-title">${phones[i].price}</h6>
     <button class="card-link bg-primary rounded" onclick="addtocard(${i})">Add To Card</button>
   </div>
 </div>`
@@ -130,12 +97,12 @@ if(items === null){
 }
 // let array = []
 function addtocard(Click) {
-    // console.log('add to card',products[Click].name);
-    if (array.includes(products[Click])) {
-        products[Click].quantity += 1;
+    // console.log('add to card',phones[Click].name);
+    if (array.includes(phones[Click])) {
+        phones[Click].quantity += 1;
     } else {
-        products[Click].quantity = 1
-        array.push(products[Click]);
+        phones[Click].quantity = 1
+        array.push(phones[Click]);
     }
     console.log(array);
 }
