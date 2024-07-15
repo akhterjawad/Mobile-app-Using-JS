@@ -43,13 +43,13 @@ randerscreen()
 
 
 function addQuantity(i) {
-    div.innerHTML = '';
+    // div.innerHTML = '';
     getitem[i].quantity += 1
-    renderItems()
+    // renderItems()
     console.log(getitem);
 }
 function lessQuantity(i) {
-    div.innerHTML = ''
+    // div.innerHTML = ''
     if (getitem[i].quantity <= 1) {
         getitem.splice(i, 1);
 

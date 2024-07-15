@@ -653,3 +653,6 @@ p a :hover {
 .btn-info{
     margin: 15px auto !important;
 }
+.marginauto{
+    margin: 0 auto !important;
+}
