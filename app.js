@@ -1,3 +1,4 @@
+console.log(phones);
 const phones = [
     {
         brand: 'Samsung ',
@@ -96,26 +97,28 @@ for (let i = 0; i < phones.length; i++) {
                     </div>
                 </div>`
 }
-for (let i = 0; i < phones.length; i++) {
+phones.map((items, index) => {
+
     div2.innerHTML += `
     <div class="rounded  card-width  p-2 ">
-                    <div class=" text-center  p-2"><img src="${phones[i].img}" class="card-img-width "
+    <div class=" text-center  p-2"><img src="${items.img}" class="card-img-width "
                             alt="no image">
                     </div>
-                    <p class="mt-1 mb-2"> ${phones[i].brand} ${phones[i].model}</p>
-                    <h4 class="mt-5"><sup>RS</sup> ${phones[i].price}</h4>
+                    <p class="mt-1 mb-2"> ${items.brand} ${items.model}</p>
+                    <h4 class="mt-5"><sup>RS</sup> ${items.price}</h4>
                     <div class=" fw-lighter wrap1 d-flex align-items-center justify-content-between">
-                        <div class="">
-                            <p><strike class="strike1 mt-3">
-                                    <sup class="strike2">RS</sup>
-                                    <span class="strike2">8,000</span>
-                                </strike>
-                            </p>
-                        </div>
-                        <div><button type="button" onclick="addtocard(${i})" class="btn card-button-font-size btn-outline-success mb-2">Add To Card</button></div>
+                    <div class="">
+                    <p><strike class="strike1 mt-3">
+                    <sup class="strike2">RS</sup>
+                    <span class="strike2">8,000</span>
+                    </strike>
+                    </p>
                     </div>
-                </div>`
-}
+                    <div><button type="button" onclick="addtocard(${index})" class="btn card-button-font-size btn-outline-success mb-2">Add To Card</button></div>
+                    </div>
+                    </div>`
+})
+
 
 let array;
 let items = JSON.parse(localStorage.getItem('getdata'));
@@ -125,14 +128,13 @@ if (items === null) {
     array = items;
     console.log(array)
 }
-// let array = []
-function addtocard(Click) {
-    // console.log('add to card',phones[Click].name);
-    if (array.includes(phones[Click])) {
-        phones[Click].quantity += 1;
+
+function addtocard(card) {
+    if (array.includes(phones[card])) {
+        phones[card].quantity += 1;
     } else {
-        phones[Click].quantity = 1
-        array.push(phones[Click]);
+        phones[card].quantity = 1
+        array.push(phones[card]);
     }
     console.log(array);
 }
