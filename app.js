@@ -1,4 +1,3 @@
-console.log(phones);
 const phones = [
     {
         brand: 'Samsung ',
