@@ -5,7 +5,7 @@ const phones = [
         ram: 12,
         rom: 256,
         camera: '50 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 370.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg'
     },
@@ -15,7 +15,7 @@ const phones = [
         ram: 4,
         rom: 128,
         camera: '12 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 202.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg'
     },
@@ -25,7 +25,7 @@ const phones = [
         ram: 4,
         rom: 128,
         camera: '12 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 252.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg'
     },
@@ -35,7 +35,7 @@ const phones = [
         ram: 12,
         rom: 512,
         camera: '200 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 999.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928-stylus.jpg'
     },
@@ -45,7 +45,7 @@ const phones = [
         ram: 12,
         rom: 256,
         camera: '48 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 858.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg'
     },
@@ -55,7 +55,7 @@ const phones = [
         ram: 8,
         rom: 256,
         camera: '48 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 379.99,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f5-2.jpg'
     },
@@ -65,7 +65,7 @@ const phones = [
         ram: 12,
         rom: 512,
         camera: '50 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 999.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg'
     },
@@ -75,7 +75,7 @@ const phones = [
         ram: 16,
         rom: 512,
         camera: '108 megapixel',
-        quantity:0,
+        quantity: 0,
         price: 329.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro-plus-int.jpg'
     },
@@ -92,7 +92,7 @@ for (let i = 0; i < phones.length; i++) {
                     </div>
                     <p class="mt-1 mb-2"> ${phones[i].brand} ${phones[i].model}</p>
                     <h4 class="mt-5"><sup>RS</sup> ${phones[i].price}</h4>
-                    <div class=" fw-lighter wrap1 d-flex align-items-center justify-content-between">
+                    <div class=" fw-lighter wrap1 d-flex align-updateArrayItems-center justify-content-between">
                         <div class="">
                             <p><strike class="strike1 mt-3">
                                     <sup class="strike2">RS</sup>
@@ -104,16 +104,16 @@ for (let i = 0; i < phones.length; i++) {
                     </div>
                 </div>`
 }
-phones.map((items, index) => {
+phones.map((updateArrayItems, index) => {
 
     div2.innerHTML += `
     <div class="rounded  card-width  p-2 ">
-    <div class=" text-center  p-2"><img src="${items.img}" class="card-img-width "
+    <div class=" text-center  p-2"><img src="${updateArrayItems.img}" class="card-img-width "
                             alt="no image">
                     </div>
-                    <p class="mt-1 mb-2"> ${items.brand} ${items.model}</p>
-                    <h4 class="mt-5"><sup>RS</sup> ${items.price}</h4>
-                    <div class=" fw-lighter wrap1 d-flex align-items-center justify-content-between">
+                    <p class="mt-1 mb-2"> ${updateArrayItems.brand} ${updateArrayItems.model}</p>
+                    <h4 class="mt-5"><sup>RS</sup> ${updateArrayItems.price}</h4>
+                    <div class=" fw-lighter wrap1 d-flex align-updateArrayItems-center justify-content-between">
                     <div class="">
                     <p><strike class="strike1 mt-3">
                     <sup class="strike2">RS</sup>
@@ -128,11 +128,11 @@ phones.map((items, index) => {
 
 
 let array;
-let items = JSON.parse(localStorage.getItem('getdata'));
-if (items === null) {
+let updateArrayItems = JSON.parse(localStorage.getItem('getdata'));
+if (updateArrayItems === null) {
     array = [];
 } else {
-    array = items;
+    array = updateArrayItems;
     console.log(array)
 }
 
@@ -160,16 +160,16 @@ function gotocart() {
 //     nav: true,
 //     responsive: {
 //         0: {
-//             items: 3
+//             updateArrayItems: 3
 //         },
 //         320: {
-//             items: 3
+//             updateArrayItems: 3
 //         },
 //         600: {
-//             items: 4
+//             updateArrayItems: 4
 //         },
 //         1000: {
-//             items: 8
+//             updateArrayItems: 8
 //         }
 //     }
 // })

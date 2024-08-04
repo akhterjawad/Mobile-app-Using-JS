@@ -38,15 +38,10 @@ function renderScreen() {
         totalAmount.innerHTML = `Total Amount = ${total}`;
     } else {
         div.innerHTML = '<h1>No items found...</h1>';
-        totalAmount.innerHTML=``
+        totalAmount.innerHTML=``;
     }
 }
-if (div.innerHTML='<h1>No items found...</h1>') {
-    totalAmount.innerHTML = ``
-} else {
-    console.log('else');
-    
-}
+
 renderScreen();
 
 function addQuantity(i) {
