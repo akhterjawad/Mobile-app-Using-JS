@@ -114,28 +114,8 @@ phones.map((updateArrayItems, index) => {
 });
 
 // Use map to iterate over the phones array and create HTML for each product in the second div
-phones.map((updateArrayItems, index) => {
-    div2.innerHTML += `
-    <div class="rounded card-width p-2 ">
-        <div class="text-center p-2">
-            <img src="${updateArrayItems.img}" class="card-img-width" alt="no image">
-        </div>
-        <p class="mt-1 mb-2"> ${updateArrayItems.brand} ${updateArrayItems.model}</p>
-        <h4 class="mt-5"><sup>RS</sup> ${updateArrayItems.price}</h4>
-        <div class="fw-lighter wrap1 d-flex align-items-center justify-content-between">
-            <div class="">
-                <p>
-                    <strike class="strike1 mt-3">
-                        <sup class="strike2">RS</sup>
-                        <span class="strike2">8,000</span>
-                    </strike>
-                </p>
-            </div>
-            <div>
-                <button type="button" onclick="addtocard(${index})" class="btn card-button-font-size btn-outline-success mb-2">Add To Cart</button>
-            </div>
-        </div>
-    </div>`;
+phones.map(() => {
+    div2.innerHTML = div.innerHTML;
 });
 
 // Initialize an array to store selected products
