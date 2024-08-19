@@ -145,7 +145,18 @@ function addtocard(card) {
 function gotocart() {
     console.log('index-2.html');
     localStorage.setItem('getdata', JSON.stringify(array));
-    window.location = '../index-2.html';
+    Swal.fire({
+        title: 'Success!',
+        text: 'You mobile is added successfully',
+        icon: 'success',
+        confirmButtonText: 'Add to card'
+    })
+        .then((result) => {
+            if (result.isConfirmed) {
+                window.location = '../index-2.html';
+            }
+        });
+    // window.location = '../index-2.html';
 }
 
 // Commented out Owl Carousel settings for future use
