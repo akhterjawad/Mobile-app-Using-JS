@@ -702,3 +702,6 @@ p a :hover {
         width: 100%; /* Stack cards on small screens */
     }
 } 
+.fs-6{
+    font-size: 0.9rem !important;
+}
