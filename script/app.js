@@ -1,14 +1,13 @@
 // Array of phone objects with details like brand, model, RAM, ROM, camera, quantity, price, and image URL
 const phones = [
     {
-        brand: 'Samsung ',
-        model: 'Galaxy A55',
-        ram: 12,
+        brand: "Apple",
+        model: "iPhone 15 Pro Max",
+        ram: 8,
         rom: 256,
-        camera: '50 megapixel',
-        quantity: 0,
-        price: 370.00,
-        img: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg'
+        camera: "48 megapixel",
+        price: 1099.00,
+        img: "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro-max.jpg"
     }, {
         brand: 'Samsung ',
         model: 'Galaxy A55',
@@ -72,16 +71,83 @@ const phones = [
         price: 999.00,
         img: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg'
     },
+];
+
+const phones2 = [
     {
-        brand: 'Xiaomi ',
-        model: 'Redmi Note 13 Pro+',
-        ram: 16,
+        brand: "Samsung",
+        model: "Galaxy Z Fold 5",
+        ram: 12,
         rom: 512,
-        camera: '108 megapixel',
-        price: 329.00,
-        img: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro-plus-int.jpg'
+        camera: "50 megapixel",
+        price: 1799.00,
+        img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold5-5g.jpg"
+    },
+    {
+        brand: "OnePlus",
+        model: "OnePlus 10 Pro",
+        ram: 8,
+        rom: 256,
+        camera: "48 megapixel",
+        price: 899.00,
+        img: "https://fdn2.gsmarena.com/vv/bigpic/oneplus-10-pro.jpg"
+    },
+    {
+        brand: 'Samsung ',
+        model: 'Galaxy A55',
+        ram: 12,
+        rom: 256,
+        camera: '50 megapixel',
+        price: 370.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg'
+    },
+    {
+        brand: 'Apple ',
+        model: 'iPhone XS Max',
+        ram: 4,
+        rom: 128,
+        camera: '12 megapixel',
+        price: 202.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg'
+    },
+    {
+        brand: 'Apple ',
+        model: 'iPhone 11',
+        ram: 4,
+        rom: 128,
+        camera: '12 megapixel',
+        price: 252.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg'
+    },
+    {
+        brand: 'Samsung ',
+        model: 'Galaxy S24 Ultra',
+        ram: 12,
+        rom: 512,
+        camera: '200 megapixel',
+        price: 999.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928-stylus.jpg'
+    },
+    {
+        brand: 'Sony ',
+        model: 'Xperia 1V',
+        ram: 12,
+        rom: 256,
+        camera: '48 megapixel',
+        price: 858.00,
+        img: 'https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg'
+    },
+    {
+        brand: "Oppo",
+        model: "Find X5 Pro",
+        ram: 12,
+        rom: 256,
+        camera: "50 megapixel",
+        price: 999.00,
+        img: "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5-pro.jpg"
     },
 ];
+
 
 // Select the first div element where products will be displayed
 let div = document.querySelector('.products');
@@ -91,31 +157,45 @@ let div2 = document.querySelector('.products2');
 // Loop through the phones array and dynamically create HTML for each product
 phones.map((updateArrayItems, index) => {
     div.innerHTML += `
-    <div class="rounded card-width p-2 ">
+   <div class="product-card rounded p-2">
         <div class="text-center p-2">
-            <img src="${updateArrayItems.img}" class="card-img-width" alt="no image">
+            <img src="${updateArrayItems.img}" class="card-img-width img-fluid" alt="no image">
         </div>
-        <p class="mt-1 mb-2"> ${updateArrayItems.brand} ${updateArrayItems.model}</p>
-        <h4 class="mt-5"><sup>RS</sup> ${updateArrayItems.price}</h4>
-        <div class="fw-lighter wrap1 d-flex align-items-center justify-content-between">
-            <div class="">
+        <p class="mt-1 mb-2">${updateArrayItems.brand} ${updateArrayItems.model}</p>
+        <h4 class="mt-5 R-mt"><sup>RS</sup> ${updateArrayItems.price}</h4>
+        <div class="fw-lighter d-flex align-items-center justify-content-between">
+            <div>
                 <p>
-                    <strike class="strike1 mt-3">
-                        <sup class="strike2">RS</sup>
-                        <span class="strike2">8,000</span>
-                    </strike>
+                    <strike class="text-muted"><sup>RS</sup>8,000</strike>
                 </p>
             </div>
             <div>
-                <button type="button" onclick="addtocard(${index})" class="btn card-button-font-size btn-outline-success mb-2">Add To Cart</button>
+                <button type="button" onclick="addtocard(${index})" class="btn btn-sm btn-outline-success responsive-btn">Add To Cart</button>
             </div>
         </div>
     </div>`;
 });
 
 // Use map to iterate over the phones array and create HTML for each product in the second div
-phones.map(() => {
-    div2.innerHTML = div.innerHTML;
+phones2.map((updateArrayItems, index) => {
+    div2.innerHTML += `
+   <div class="product-card rounded p-2">
+        <div class="text-center p-2">
+            <img src="${updateArrayItems.img}" class="card-img-width img-fluid" alt="no image">
+        </div>
+        <p class="mt-1 mb-2">${updateArrayItems.brand} ${updateArrayItems.model}</p>
+        <h4 class="mt-5 R-mt"><sup>RS</sup> ${updateArrayItems.price}</h4>
+        <div class="fw-lighter d-flex align-items-center justify-content-between">
+            <div>
+                <p>
+                    <strike class="text-muted"><sup>RS</sup>8,000</strike>
+                </p>
+            </div>
+            <div>
+                <button type="button" onclick="addtocard(${index})" class="btn btn-sm btn-outline-success responsive-btn">Add To Cart</button>
+            </div>
+        </div>
+    </div>` ;
 });
 
 // Initialize an array to store selected products
